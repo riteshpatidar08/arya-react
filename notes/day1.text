@@ -1,0 +1,79 @@
+import React from 'react';
+
+function App() {
+  const college = 'arya';
+
+  const obj = [
+    {
+      h1: 'React v19',
+      p: 'lorem lkafjkdl',
+      date: 'december',
+    },
+    {
+      h1: 'React v18',
+      p: 'lorem lkafjkdl',
+      date: 'March',
+    },
+  ];
+  return (
+    <div>
+      <h1>{college}</h1>
+      <Navbar />
+      {/* <Card date={obj[0].date} />
+      <Card date="March 2024" />
+      <Card date="january 2024" /> */}
+      <h1>hello</h1>
+      <button className="bg-red-600 text-white px-10 py-2 rounded-lg hover:bg-blue-400 text-[40px] ">
+        Submit
+      </button>
+    </div>
+  );
+}
+
+function Card({ date }) {
+  return (
+    <div style={{ height: '200px', width: '400px', border: '1px solid red' }}>
+      <h1>React V19</h1>
+      <p>{date}</p>
+      <p>lorem kjdafkjdfk k hdkjlfahskjdf</p>
+    </div>
+  );
+}
+
+function Navbar() {
+  return (
+    <div>
+      <header className="bg-[#121212] h-16 flex justify-between items-center">
+        <div className="text-white text-2xl font-bold ml-10">
+          Job <span className="text-red-500">Finder</span>
+        </div>
+        <div className='flex gap-4'>
+          <button className="rounded-full border text-white px-10 py-2 border-red-500">
+            Login
+          </button>
+          <button className='px-10 py-2 bg-red-500 text-white rounded-full'>Register</button>
+        </div>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+
+// const props = {
+//   date : 'december'
+// }
+
+// {date} = props
+
+
+
+//npm create vite@latest .
+//select react 
+//select js 
+//npm install 
+//npm run dev
+
+//folder structure of the react 
+//react follows component based architecture:
+//jsx
