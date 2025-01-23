@@ -47,3 +47,9 @@ function Login() {
 }
 
 export default Login;
+
+
+//props
+//events
+//state => useState 
+//list rendering

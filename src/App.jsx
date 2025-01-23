@@ -1,33 +1,25 @@
 import React from 'react';
-import Button from './components/Button';
-import { useState } from 'react';
-import Login from './components/Login';
-function App() {
-  const [college, setCollege] = useState('arya');
 
-  // let college = 'arya';
-  const handleClick = () => {
-    setCollege('skit');
-    console.log(college);
-  };
+function App() {
+  // const companies = ['meta' , 'google' ,'neflix']
+  const companies = [
+    { id: 1, name: 'meta' },
+    { id: 2, name: 'google' },
+    { id: 3, name: 'netflix' },
+  ];
   return (
     <div>
-      <h1 className="text-center text-3xl font-semibold">{college}</h1>
-      <button
-        onClick={handleClick}
-        className="text-white bg-blue-500 px-10 py-2 rounded-lg"
-      >
-        Click
-      </button>
-    <Login/>
+      <h1 className="text-center text-blue-500 font-bold text-4xl">
+        List rendering
+      </h1>
+      {/* <h1>{companies[0]}</h1>
+      <h1>{companies[1]}</h1>
+      <h1>{companies[2]}</h1> */}
+      {companies.map((company, index) => (
+        <h1 key={company.id}>{company.name}</h1>
+      ))}
     </div>
   );
 }
 
 export default App;
-
-//props are the react feature which is used to share data between parent to child
-
-// h1.addEventListern('click',function(){
-
-// })
